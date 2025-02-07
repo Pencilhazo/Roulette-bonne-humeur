@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Roulette de la Bonne Humeur - Mada House</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    .challenge {
+      font-size: 1.2em;
+      margin: 20px 0;
+      padding: 20px;
+      background: #e9f5e9;
+      border: 2px dashed #4CAF50;
+      border-radius: 10px;
+    }
+    .button {
+      padding: 10px 25px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Roulette de la Bonne Humeur</h1>
+    <div id="challengeDisplay" class="challenge">
+      Cliquez sur le bouton ci-dessous pour obtenir un défi amusant !
+    </div>
+    <button id="spinButton" class="button">Obtenir un défi</button>
+  </div>
+
+  <script>
+    // Liste des 18 défis
+    const challenges = [
+      "1. Le Compliment Éclair : Complimente de manière originale la personne à ta droite en moins de 10 secondes.",
+      "2. La Blague Renversante : Raconte ta meilleure blague – même la plus nulle – pour faire rire tout le monde.",
+      "3. L’Imitation Délicieuse : Imite gentiment une célébrité ou un collègue pendant 20 secondes (dans un esprit respectueux et bienveillant).",
+      "4. La Danse du Vendredi : Laisse-toi aller et improvise une petite danse pendant 20 secondes pour partager ta bonne humeur.",
+      "5. L’Anecdote Insolite : Raconte une anecdote amusante ou embarrassante (sans gêner personne) qui te soit arrivée.",
+      "6. Le Compliment Surprise : Choisis une personne dans le groupe et explique-lui en quelques mots pourquoi elle est géniale.",
+      "7. La Pub Mada : Crée une mini publicité de 30 secondes pour Mada House, en exagérant un aspect positif ou original de l’entreprise.",
+      "8. L’Invention Farfelue : Invente un produit imaginaire qui améliorerait la vie au bureau et décris-le en quelques phrases.",
+      "9. Le Mime Mystère : Mime une scène culte d’un film ou une situation amusante et laisse les autres deviner ce que c’est.",
+      "10. La Chanson Express : Chante un court extrait (15-20 secondes) de ta chanson préférée en intégrant, par exemple, le nom de Mada House dans les paroles.",
+      "11. L’Impro’ Discours : Donne un mini-discours motivant (30 secondes maximum) pour booster l’équipe.",
+      "12. Le Selfie Fun : Prends un selfie de groupe avec une pose originale et partage-le sur votre espace de communication interne.",
+      "13. La Question Existentialiste : Pose au groupe une question drôle ou décalée (exemple : « Si on était tous des super-héros, quels seraient nos pouvoirs ? »).",
+      "14. Le Tour de Table Créatif : Demande à chacun de dire un mot qui décrit sa journée de façon originale, puis créez ensemble une phrase ou une histoire amusante.",
+      "15. Le Clin d’Œil Historique : Inventez ensemble une histoire fictive et humoristique sur la création ou un événement marquant de Mada House.",
+      "16. Le Bruit Rigolo : Produis le bruit le plus drôle que tu puisses imaginer et invite les autres à reproduire ce son en chœur.",
+      "17. Le Mot Magique : Dis un mot inventé et explique-lui un super pouvoir fictif que ce mot accorderait à celui qui le prononce.",
+      "18. L’Échange de Rôles : Propose d’échanger ta place avec la personne à ta gauche pour 2 minutes et mène une mini-interview sur des questions légères."
+    ];
+
+    // Fonction qui choisit aléatoirement un défi
+    document.getElementById("spinButton").addEventListener("click", function(){
+      const randomIndex = Math.floor(Math.random() * challenges.length);
+      document.getElementById("challengeDisplay").innerText = challenges[randomIndex];
+    });
+  </script>
+</body>
+</html>
